@@ -26,9 +26,9 @@ $(document).ready(function () {
     }
     //Filtre dans cette liste les entrepreneurs qui sont nés dans les années 70
     let tmp = entrepreneurs.filter(bornInTheSeventies);
-    console.log("List of entrepreneurs from the 70's in the list : ")
+    console.log("les entrepreneurs qui sont nés dans les années 70 : ")
     console.log(tmp);
-    let output = "<h5>List of entrepreneurs from the 70's in the list :</h5> <br />";
+    let output = "<h5>Liste des entrepreneurs né dans les 70's :</h5> <br />";
     for (let i = 0; i < tmp.length; i++) {
         output += tmp[i].first + " " + tmp[i].last + "<br />";
     }
@@ -39,9 +39,9 @@ $(document).ready(function () {
     for (let i = 0; i < entrepreneurs.length; i++) {
         tmp[i] = { first: entrepreneurs[i].first, last: entrepreneurs[i].last };
     }
-    console.log("Names of entrepreneurs in the list : ")
+    console.log("Noms des entrepreneurs dans la liste : ")
     console.log(tmp);
-    output = "<h5>Names of entrepreneurs in the list :</h5> <br />";
+    output = "<h5>Noms des entrepreneurs dans la liste :</h5> <br />";
     for (let i = 0; i < tmp.length; i++) {
         output += tmp[i].first + " " + tmp[i].last + "<br />";
     }
@@ -52,11 +52,11 @@ $(document).ready(function () {
     for (let i = 0; i < entrepreneurs.length; i++) {
         tmp[i] = { first: entrepreneurs[i].first, last: entrepreneurs[i].last, age: (2020 - entrepreneurs[i].year) }
     }
-    console.log("Age today of entrepreneurs in the list : ")
+    console.log("Age actuel des entrepreneurs dans la liste : ")
     console.log(tmp);
-    output = "<h5>Age today of entrepreneurs in the list :</h5> <br />";
+    output = "<h5>Age actuel des entrepreneurs dans la liste :</h5> <br />";
     for (let i = 0; i < tmp.length; i++) {
-        output += tmp[i].first + " " + tmp[i].last + " was born " + tmp[i].age + " years ago<br />";
+        output += tmp[i].first + " " + tmp[i].last + " est ne il y a " + tmp[i].age + "annees <br />";
     }
     $('#result3').html(output);
 
@@ -72,9 +72,9 @@ $(document).ready(function () {
     }
     tmp = entrepreneurs;
     tmp.sort(compare);
-    console.log("Entrepreneurs sorted alphabeticaly by last name : ")
+    console.log("Entrepreneurs classés alphabetic. par noms de famille : ")
     console.log(tmp);
-    output = "<h5>Entrepreneurs sorted alphabeticaly by last name :</h5> <br />";
+    output = "<h5>Entrepreneurs classés alphabetic. par noms de famille :</h5> <br />";
     for (let i = 0; i < tmp.length; i++) {
         output += tmp[i].last + ", " + tmp[i].first + "<br />";
     }
